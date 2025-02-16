@@ -11,10 +11,10 @@ exports.dataSourceOptions = {
     username: process.env.DB_USERNAME,
     password: process.env.DB_PASSWORD,
     database: process.env.DB_DATABASE,
-    entities: [],
+    entities: ['dist/**/*.entity{.ts,.js}'],
     migrations: [],
     logging: false,
-    synchronize: false,
+    synchronize: true,
 };
 const dataSource = new typeorm_1.DataSource(exports.dataSourceOptions);
 exports.default = dataSource;
